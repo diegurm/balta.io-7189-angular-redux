@@ -9,6 +9,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { cartReducer } from './reducers/cart.reducer';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { cartReducer } from './reducers/cart.reducer';
     })
   ],
   providers: [
+    DataService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
