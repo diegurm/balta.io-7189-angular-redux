@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
+
 import { AppRoutingModule } from './app-routing.module';
 import { cartReducer } from './reducers/cart.reducer';
 import { DataService } from './data.service';
