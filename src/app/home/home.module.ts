@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { ProductListComponent } from '../components/product-list/product-list.component';
+import { ShoppingCartComponent } from '../components/shopping-cart/shopping-cart.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,11 @@ import { ProductListComponent } from '../components/product-list/product-list.co
       }
     ])
   ],
-  declarations: [HomePage, NavbarComponent, ProductListComponent]
+  declarations: [
+    HomePage,
+    NavbarComponent,
+    ProductListComponent,
+    ShoppingCartComponent
+  ]
 })
 export class HomePageModule {}

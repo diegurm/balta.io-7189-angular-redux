@@ -1,6 +1,6 @@
-import { CartModel } from '../models/cart.model';
+import { ActionTypes } from '../actions/cart.action';
 import { ActionModel } from '../models/action.model';
-import { ActionTypes } from '../actions/cart.ations';
+import { CartModel } from '../models/cart.model';
 import { ProductModel } from '../models/product.model';
 
 export const cart = new CartModel();
@@ -16,7 +16,7 @@ export function cartReducer(state = cart, action: ActionModel) {
 
     case ActionTypes.Remove: {
       const index = state.products.indexOf(action.payload);
-      state.products.slice(index, 1);
+      state.products.splice(index, 1);
       state.total = calculateTotal(state.products);
 
       return state;
@@ -24,7 +24,9 @@ export function cartReducer(state = cart, action: ActionModel) {
 
     case ActionTypes.Clear: {
       state = new CartModel();
-      state.total = 0;
+      state.total = calculateTotal(state.products);
+
+      return state;
     }
 
     default:

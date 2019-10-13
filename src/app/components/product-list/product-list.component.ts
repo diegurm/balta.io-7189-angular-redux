@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
 import { DataService } from './../../data.service';
-import { Add } from './../../actions/cart.ations';
+import { Add } from '../../actions/cart.action';
 import { CartModel } from './../../models/cart.model';
 
 @Component({
